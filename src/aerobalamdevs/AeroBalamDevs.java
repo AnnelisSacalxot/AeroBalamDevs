@@ -5,6 +5,8 @@
  */
 package aerobalamdevs;
 
+import aerobalamdevs.Ventana.Inicio;
+
 /**
  *
  * @author annelis
@@ -16,6 +18,7 @@ public class AeroBalamDevs {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Inicio.main(args);
     }
     
 }
