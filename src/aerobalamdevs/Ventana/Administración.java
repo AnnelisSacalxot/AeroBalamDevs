@@ -29,9 +29,14 @@ public class Administración extends javax.swing.JFrame {
     private void initComponents() {
 
         jButtonRegresar = new javax.swing.JButton();
+        jTabbedAdministracion = new javax.swing.JTabbedPane();
+        jPanelAgenciaAerolinea = new javax.swing.JPanel();
+        jPanelDepartamentoAdministracion = new javax.swing.JPanel();
+        jPanelOperadorVuelos = new javax.swing.JPanel();
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButtonRegresar.setBackground(new java.awt.Color(0, 0, 204));
@@ -44,6 +49,12 @@ public class Administración extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButtonRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 450, 130, 40));
+
+        jTabbedAdministracion.addTab("Agencia Aerolinea", jPanelAgenciaAerolinea);
+        jTabbedAdministracion.addTab("Departamento de Administración", jPanelDepartamentoAdministracion);
+        jTabbedAdministracion.addTab("Operador de Vuelos", jPanelOperadorVuelos);
+
+        getContentPane().add(jTabbedAdministracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 430));
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aerobalamdevs/Imagenes/aeropuerto.jpg"))); // NOI18N
         getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -97,5 +108,9 @@ public class Administración extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonRegresar;
     private javax.swing.JLabel jLabelFondo;
+    private javax.swing.JPanel jPanelAgenciaAerolinea;
+    private javax.swing.JPanel jPanelDepartamentoAdministracion;
+    private javax.swing.JPanel jPanelOperadorVuelos;
+    private javax.swing.JTabbedPane jTabbedAdministracion;
     // End of variables declaration//GEN-END:variables
 }

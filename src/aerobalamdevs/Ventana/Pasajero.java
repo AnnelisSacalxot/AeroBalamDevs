@@ -29,9 +29,14 @@ public class Pasajero extends javax.swing.JFrame {
     private void initComponents() {
 
         jButtonRegresar = new javax.swing.JButton();
+        jTabbedPaneUsuario = new javax.swing.JTabbedPane();
+        jPanelCompraBoletos = new javax.swing.JPanel();
+        jPanelLoginPasajero = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButtonRegresar.setBackground(new java.awt.Color(0, 0, 153));
@@ -44,6 +49,12 @@ public class Pasajero extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButtonRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 300, 130, 40));
+
+        jTabbedPaneUsuario.addTab("Compra de Boletos", jPanelCompraBoletos);
+        jTabbedPaneUsuario.addTab("Login Pasajero", jPanelLoginPasajero);
+        jTabbedPaneUsuario.addTab("tab3", jPanel2);
+
+        getContentPane().add(jTabbedPaneUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 630, 260));
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aerobalamdevs/Imagenes/Inicio.jpg"))); // NOI18N
         getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -103,5 +114,9 @@ public class Pasajero extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonRegresar;
     private javax.swing.JLabel jLabelFondo;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanelCompraBoletos;
+    private javax.swing.JPanel jPanelLoginPasajero;
+    private javax.swing.JTabbedPane jTabbedPaneUsuario;
     // End of variables declaration//GEN-END:variables
 }
