@@ -128,7 +128,7 @@ public class Inicio extends javax.swing.JFrame {
 
     private void jButtonOpcionAdministracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonOpcionAdministracionActionPerformed
         // Mandamos a llamar a JFrame correspondiente
-        Administración vistaAdministracion = new Administración();
+        InicioSesionAdministracion vistaAdministracion = new InicioSesionAdministracion();
         vistaAdministracion.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButtonOpcionAdministracionActionPerformed

@@ -9,15 +9,15 @@ package aerobalamdevs.Ventana;
  *
  * @author annelis
  */
-public class Administración extends javax.swing.JFrame {
+public class OperadorVuelo extends javax.swing.JFrame {
 
     /**
-     * Creates new form Administración
+     * Creates new form OperadorVuelo
      */
-    public Administración() {
+    public OperadorVuelo() {
         initComponents();
+        
         this.setLocationRelativeTo(null);
-    
     }
 
     /**
@@ -33,11 +33,10 @@ public class Administración extends javax.swing.JFrame {
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButtonRegresar.setBackground(new java.awt.Color(0, 0, 204));
-        jButtonRegresar.setFont(new java.awt.Font("aakar", 3, 18)); // NOI18N
+        jButtonRegresar.setBackground(new java.awt.Color(0, 0, 255));
+        jButtonRegresar.setFont(new java.awt.Font("Yrsa Medium", 2, 18)); // NOI18N
         jButtonRegresar.setForeground(new java.awt.Color(255, 255, 255));
         jButtonRegresar.setText("Regresar");
         jButtonRegresar.addActionListener(new java.awt.event.ActionListener() {
@@ -45,20 +44,19 @@ public class Administración extends javax.swing.JFrame {
                 jButtonRegresarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 450, 130, 40));
+        getContentPane().add(jButtonRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(446, 360, 120, -1));
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aerobalamdevs/Imagenes/aeropuerto.jpg"))); // NOI18N
-        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 420));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegresarActionPerformed
-        // Llamamos al JFrame anterior para que se muestre
-        
-     InicioSesionAdministracion vistaInicio3 = new InicioSesionAdministracion();
-     vistaInicio3.setVisible(true);
-     this.dispose();
+        // TODO add your handling code here:
+        InicioSesionAdministracion vistaInicio4 = new InicioSesionAdministracion();
+        vistaInicio4.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButtonRegresarActionPerformed
 
     /**
@@ -78,20 +76,20 @@ public class Administración extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Administración.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OperadorVuelo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Administración.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OperadorVuelo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Administración.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OperadorVuelo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Administración.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OperadorVuelo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-          //      new Administración().setVisible(true);
+                new OperadorVuelo().setVisible(true);
             }
         });
     }

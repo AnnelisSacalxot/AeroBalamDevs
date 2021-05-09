@@ -12,7 +12,7 @@ package aerobalamdevs.Ventana;
 public class Pasajero extends javax.swing.JFrame {
 
     /**
-     * Creates new form Pasajero
+     * Creates new form Pasajero.
      */
     public Pasajero() {
         initComponents();
@@ -31,7 +31,29 @@ public class Pasajero extends javax.swing.JFrame {
         jButtonRegresar = new javax.swing.JButton();
         jTabbedPaneUsuario = new javax.swing.JTabbedPane();
         jPanelCompraBoletos = new javax.swing.JPanel();
+        jLabelNoPasaporte = new javax.swing.JLabel();
+        jLabelTarjetaCredito = new javax.swing.JLabel();
+        jLabelBoletos = new javax.swing.JLabel();
+        jTextFieldLlenarPasaporte = new javax.swing.JTextField();
+        jTextFieldLlenarTarjeta = new javax.swing.JTextField();
+        jComboBoxNoBoletosComprar = new javax.swing.JComboBox<>();
+        jButtonCompraDeBoleto = new javax.swing.JButton();
+        jButtonSugerenciaVuelo = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextAreaMostrarInformacionBoletos = new javax.swing.JTextArea();
+        jLabelInformacion1 = new javax.swing.JLabel();
+        jLabelInformacion2 = new javax.swing.JLabel();
+        jLabelAsientos = new javax.swing.JLabel();
+        jButtonAsientoDisponible = new javax.swing.JButton();
         jPanelLoginPasajero = new javax.swing.JPanel();
+        jLabelPasaporte = new javax.swing.JLabel();
+        jLabelContraseña = new javax.swing.JLabel();
+        jTextFieldEntradaNoPasaporte = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextAreaMostrarDatosPasajero = new javax.swing.JTextArea();
+        jLabelMostrarDatos = new javax.swing.JLabel();
+        jPasswordFieldEntradaContraseña = new javax.swing.JPasswordField();
+        jButtonLoginPasajero = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabelFondo = new javax.swing.JLabel();
 
@@ -50,9 +72,112 @@ public class Pasajero extends javax.swing.JFrame {
         });
         getContentPane().add(jButtonRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 300, 130, 40));
 
+        jPanelCompraBoletos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelNoPasaporte.setFont(new java.awt.Font("Yrsa Medium", 2, 18)); // NOI18N
+        jLabelNoPasaporte.setText("No. Pasaporte:");
+        jPanelCompraBoletos.add(jLabelNoPasaporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+
+        jLabelTarjetaCredito.setFont(new java.awt.Font("Yrsa Medium", 2, 18)); // NOI18N
+        jLabelTarjetaCredito.setText("No. Tarjeta de Crédito:");
+        jPanelCompraBoletos.add(jLabelTarjetaCredito, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
+
+        jLabelBoletos.setFont(new java.awt.Font("Yrsa Medium", 2, 18)); // NOI18N
+        jLabelBoletos.setText("Boletos a comprar:");
+        jPanelCompraBoletos.add(jLabelBoletos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
+        jPanelCompraBoletos.add(jTextFieldLlenarPasaporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 170, -1));
+
+        jTextFieldLlenarTarjeta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldLlenarTarjetaActionPerformed(evt);
+            }
+        });
+        jPanelCompraBoletos.add(jTextFieldLlenarTarjeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 170, -1));
+
+        jComboBoxNoBoletosComprar.setFont(new java.awt.Font("Yrsa Medium", 2, 18)); // NOI18N
+        jComboBoxNoBoletosComprar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Boletos 1", "Boletos 2", "Boletos 3", "Más..." }));
+        jComboBoxNoBoletosComprar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxNoBoletosComprarActionPerformed(evt);
+            }
+        });
+        jPanelCompraBoletos.add(jComboBoxNoBoletosComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, 120, -1));
+
+        jButtonCompraDeBoleto.setBackground(new java.awt.Color(102, 204, 0));
+        jButtonCompraDeBoleto.setFont(new java.awt.Font("Yrsa Medium", 2, 18)); // NOI18N
+        jButtonCompraDeBoleto.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonCompraDeBoleto.setText("Comprar");
+        jButtonCompraDeBoleto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCompraDeBoletoActionPerformed(evt);
+            }
+        });
+        jPanelCompraBoletos.add(jButtonCompraDeBoleto, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, -1, -1));
+
+        jButtonSugerenciaVuelo.setBackground(new java.awt.Color(255, 51, 51));
+        jButtonSugerenciaVuelo.setFont(new java.awt.Font("Yrsa Medium", 2, 18)); // NOI18N
+        jButtonSugerenciaVuelo.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonSugerenciaVuelo.setText("Ver Sugerencia de Vuelo");
+        jPanelCompraBoletos.add(jButtonSugerenciaVuelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 183, -1, 30));
+
+        jTextAreaMostrarInformacionBoletos.setBackground(new java.awt.Color(255, 255, 255));
+        jTextAreaMostrarInformacionBoletos.setColumns(20);
+        jTextAreaMostrarInformacionBoletos.setRows(5);
+        jScrollPane2.setViewportView(jTextAreaMostrarInformacionBoletos);
+
+        jPanelCompraBoletos.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 80, -1, 90));
+
+        jLabelInformacion1.setFont(new java.awt.Font("Yrsa Medium", 2, 18)); // NOI18N
+        jLabelInformacion1.setText("Tomar en cuenta la siguiente");
+        jPanelCompraBoletos.add(jLabelInformacion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, -1, -1));
+
+        jLabelInformacion2.setFont(new java.awt.Font("Yrsa Medium", 2, 18)); // NOI18N
+        jLabelInformacion2.setText("información:");
+        jPanelCompraBoletos.add(jLabelInformacion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 50, -1, -1));
+
+        jLabelAsientos.setFont(new java.awt.Font("Yrsa Medium", 2, 18)); // NOI18N
+        jLabelAsientos.setText("Asientos Disponibles:");
+        jPanelCompraBoletos.add(jLabelAsientos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
+
+        jButtonAsientoDisponible.setFont(new java.awt.Font("Yrsa Medium", 2, 18)); // NOI18N
+        jButtonAsientoDisponible.setText("Asientos");
+        jPanelCompraBoletos.add(jButtonAsientoDisponible, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 120, -1));
+
         jTabbedPaneUsuario.addTab("Compra de Boletos", jPanelCompraBoletos);
+
+        jPanelLoginPasajero.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelPasaporte.setFont(new java.awt.Font("Yrsa Medium", 2, 18)); // NOI18N
+        jLabelPasaporte.setText("No. Pasaporte:");
+        jPanelLoginPasajero.add(jLabelPasaporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
+
+        jLabelContraseña.setFont(new java.awt.Font("Yrsa Medium", 2, 18)); // NOI18N
+        jLabelContraseña.setText("Contraseña:");
+        jPanelLoginPasajero.add(jLabelContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+        jPanelLoginPasajero.add(jTextFieldEntradaNoPasaporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, 180, -1));
+
+        jTextAreaMostrarDatosPasajero.setBackground(new java.awt.Color(255, 153, 153));
+        jTextAreaMostrarDatosPasajero.setColumns(20);
+        jTextAreaMostrarDatosPasajero.setRows(5);
+        jScrollPane1.setViewportView(jTextAreaMostrarDatosPasajero);
+
+        jPanelLoginPasajero.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 60, -1, 160));
+
+        jLabelMostrarDatos.setFont(new java.awt.Font("Yrsa Medium", 2, 18)); // NOI18N
+        jLabelMostrarDatos.setText("Datos:");
+        jPanelLoginPasajero.add(jLabelMostrarDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 30, -1, -1));
+        jPanelLoginPasajero.add(jPasswordFieldEntradaContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 180, -1));
+
+        jButtonLoginPasajero.setBackground(new java.awt.Color(0, 255, 255));
+        jButtonLoginPasajero.setFont(new java.awt.Font("Yrsa Medium", 2, 18)); // NOI18N
+        jButtonLoginPasajero.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonLoginPasajero.setText("Ingresar");
+        jPanelLoginPasajero.add(jButtonLoginPasajero, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, -1, -1));
+
         jTabbedPaneUsuario.addTab("Login Pasajero", jPanelLoginPasajero);
-        jTabbedPaneUsuario.addTab("tab3", jPanel2);
+
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jTabbedPaneUsuario.addTab("Vuelos Disponibles", jPanel2);
 
         getContentPane().add(jTabbedPaneUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 630, 260));
 
@@ -75,6 +200,18 @@ public class Pasajero extends javax.swing.JFrame {
         vistaInicio1.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButtonRegresarActionPerformed
+
+    private void jTextFieldLlenarTarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldLlenarTarjetaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldLlenarTarjetaActionPerformed
+
+    private void jComboBoxNoBoletosComprarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxNoBoletosComprarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxNoBoletosComprarActionPerformed
+
+    private void jButtonCompraDeBoletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCompraDeBoletoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonCompraDeBoletoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -112,11 +249,33 @@ public class Pasajero extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonAsientoDisponible;
+    private javax.swing.JButton jButtonCompraDeBoleto;
+    private javax.swing.JButton jButtonLoginPasajero;
     private javax.swing.JButton jButtonRegresar;
+    private javax.swing.JButton jButtonSugerenciaVuelo;
+    private javax.swing.JComboBox<String> jComboBoxNoBoletosComprar;
+    private javax.swing.JLabel jLabelAsientos;
+    private javax.swing.JLabel jLabelBoletos;
+    private javax.swing.JLabel jLabelContraseña;
     private javax.swing.JLabel jLabelFondo;
+    private javax.swing.JLabel jLabelInformacion1;
+    private javax.swing.JLabel jLabelInformacion2;
+    private javax.swing.JLabel jLabelMostrarDatos;
+    private javax.swing.JLabel jLabelNoPasaporte;
+    private javax.swing.JLabel jLabelPasaporte;
+    private javax.swing.JLabel jLabelTarjetaCredito;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanelCompraBoletos;
     private javax.swing.JPanel jPanelLoginPasajero;
+    private javax.swing.JPasswordField jPasswordFieldEntradaContraseña;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPaneUsuario;
+    private javax.swing.JTextArea jTextAreaMostrarDatosPasajero;
+    private javax.swing.JTextArea jTextAreaMostrarInformacionBoletos;
+    private javax.swing.JTextField jTextFieldEntradaNoPasaporte;
+    private javax.swing.JTextField jTextFieldLlenarPasaporte;
+    private javax.swing.JTextField jTextFieldLlenarTarjeta;
     // End of variables declaration//GEN-END:variables
 }
