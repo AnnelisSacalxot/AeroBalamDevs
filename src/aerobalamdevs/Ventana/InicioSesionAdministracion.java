@@ -63,6 +63,7 @@ public class InicioSesionAdministracion extends javax.swing.JFrame {
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButtonRegresar.setBackground(new java.awt.Color(0, 0, 255));
@@ -102,7 +103,12 @@ public class InicioSesionAdministracion extends javax.swing.JFrame {
         getContentPane().add(jPasswordFieldCampoContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 201, 180, 30));
 
         jComboBoxTIpoUsuario.setFont(new java.awt.Font("Yrsa Medium", 2, 18)); // NOI18N
-        jComboBoxTIpoUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Depto. Administración", "Agencia de Aerolinea ", "Operador de Vuelos" }));
+        jComboBoxTIpoUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Depto. Administración", "Agencia de Aerolinea", "Operador de Vuelos" }));
+        jComboBoxTIpoUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jComboBoxTIpoUsuarioMouseClicked(evt);
+            }
+        });
         jComboBoxTIpoUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxTIpoUsuarioActionPerformed(evt);
@@ -146,12 +152,35 @@ public class InicioSesionAdministracion extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBoxTIpoUsuarioActionPerformed
 
     private void jButtonIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIngresarActionPerformed
-        // TODO add your handling code here:
-      Administración administracion = new Administración();
-      administracion.setVisible(true);
-      this.dispose();
         
+     /**
+     * @param Opcion vamos a crear un metodo que me compare 
+     * la seleccion elegida en el ComboBoxTIpoUsuario para que
+     * especificamente se abra la venta que corresponde y para ello
+     * se hara un if como condicional
+     */
+  
+        
+        String Opcion  = (String)jComboBoxTIpoUsuario.getSelectedItem();
+         if ("Depto. Administración".equals(Opcion)) {
+            Administración administracion = new Administración();
+            administracion.setVisible(true);
+        this.dispose();
+        } else if ("Agencia de Aerolinea".equals(Opcion)) {
+         GerenciaAerolinea aerolinea = new GerenciaAerolinea();   
+         aerolinea.setVisible(true);
+         this.dispose();
+        } else if ("Operador de Vuelos".equals(Opcion)) {
+          OperadorVuelo operador = new OperadorVuelo();
+          operador.setVisible(true);
+          this.dispose();
+        }
+      
     }//GEN-LAST:event_jButtonIngresarActionPerformed
+
+    private void jComboBoxTIpoUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBoxTIpoUsuarioMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxTIpoUsuarioMouseClicked
 
     /**
      * @param args the command line arguments

@@ -4,9 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/home/annelis/NetBeansProjects/AeroBalamDevs/src/aerobalamdevs/Ventana/Administración.java</file>
+            <file>file:/home/annelis/NetBeansProjects/AeroBalamDevs/src/aerobalamdevs/Ventana/GerenciaAerolinea.java</file>
             <file>file:/home/annelis/NetBeansProjects/AeroBalamDevs/src/aerobalamdevs/Ventana/InicioSesionAdministracion.java</file>
-            <file>file:/home/annelis/NetBeansProjects/AeroBalamDevs/src/aerobalamdevs/Ventana/Pasajero.java</file>
             <file>file:/home/annelis/NetBeansProjects/AeroBalamDevs/src/aerobalamdevs/Ventana/Inicio.java</file>
+            <file>file:/home/annelis/NetBeansProjects/AeroBalamDevs/src/aerobalamdevs/Ventana/Pasajero.java</file>
         </group>
     </open-files>
 </project-private>

@@ -30,9 +30,12 @@ public class GerenciaAerolinea extends javax.swing.JFrame {
     private void initComponents() {
 
         jButtonRegresar = new javax.swing.JButton();
+        jLabelTitulo = new javax.swing.JLabel();
+        jButtonSalir = new javax.swing.JButton();
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButtonRegresar.setBackground(new java.awt.Color(0, 0, 255));
@@ -46,7 +49,27 @@ public class GerenciaAerolinea extends javax.swing.JFrame {
         });
         getContentPane().add(jButtonRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(446, 430, 130, -1));
 
+        jLabelTitulo.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelTitulo.setFont(new java.awt.Font("Yrsa Medium", 2, 24)); // NOI18N
+        jLabelTitulo.setForeground(new java.awt.Color(255, 0, 0));
+        jLabelTitulo.setText("GERENCIA DE AEROLIENA");
+        getContentPane().add(jLabelTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 30, 390, 40));
+
+        jButtonSalir.setBackground(new java.awt.Color(255, 255, 0));
+        jButtonSalir.setFont(new java.awt.Font("Yrsa Medium", 2, 18)); // NOI18N
+        jButtonSalir.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonSalir.setText("Salir");
+        jButtonSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSalirActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 20, 80, 30));
+
+        jLabelFondo.setFont(new java.awt.Font("Yrsa Medium", 2, 24)); // NOI18N
+        jLabelFondo.setForeground(new java.awt.Color(255, 0, 0));
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aerobalamdevs/Imagenes/aeropuerto.jpg"))); // NOI18N
+        jLabelFondo.setToolTipText("");
         getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
@@ -58,6 +81,11 @@ public class GerenciaAerolinea extends javax.swing.JFrame {
         vistaInicio5.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButtonRegresarActionPerformed
+
+    private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed
+        //Escribimos código para que el usario pueda salir
+        System.exit(0);
+    }//GEN-LAST:event_jButtonSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -96,6 +124,8 @@ public class GerenciaAerolinea extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonRegresar;
+    private javax.swing.JButton jButtonSalir;
     private javax.swing.JLabel jLabelFondo;
+    private javax.swing.JLabel jLabelTitulo;
     // End of variables declaration//GEN-END:variables
 }

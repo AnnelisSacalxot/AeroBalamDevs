@@ -55,6 +55,7 @@ public class Pasajero extends javax.swing.JFrame {
         jPasswordFieldEntradaContraseña = new javax.swing.JPasswordField();
         jButtonLoginPasajero = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        jButtonSalir = new javax.swing.JButton();
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -117,7 +118,7 @@ public class Pasajero extends javax.swing.JFrame {
         jButtonSugerenciaVuelo.setBackground(new java.awt.Color(255, 51, 51));
         jButtonSugerenciaVuelo.setFont(new java.awt.Font("Yrsa Medium", 2, 18)); // NOI18N
         jButtonSugerenciaVuelo.setForeground(new java.awt.Color(0, 0, 0));
-        jButtonSugerenciaVuelo.setText("Ver Sugerencia de Vuelo");
+        jButtonSugerenciaVuelo.setText("Ver Sugerencia de Asientos");
         jPanelCompraBoletos.add(jButtonSugerenciaVuelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 183, -1, 30));
 
         jTextAreaMostrarInformacionBoletos.setBackground(new java.awt.Color(255, 255, 255));
@@ -181,6 +182,17 @@ public class Pasajero extends javax.swing.JFrame {
 
         getContentPane().add(jTabbedPaneUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 630, 260));
 
+        jButtonSalir.setBackground(new java.awt.Color(255, 255, 0));
+        jButtonSalir.setFont(new java.awt.Font("Yrsa Medium", 2, 18)); // NOI18N
+        jButtonSalir.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonSalir.setText("Salir");
+        jButtonSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSalirActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, 70, -1));
+
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aerobalamdevs/Imagenes/Inicio.jpg"))); // NOI18N
         getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -212,6 +224,11 @@ public class Pasajero extends javax.swing.JFrame {
     private void jButtonCompraDeBoletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCompraDeBoletoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonCompraDeBoletoActionPerformed
+
+    private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed
+        // Código para que pueda cerrar el programa
+        System.exit(0);
+    }//GEN-LAST:event_jButtonSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -253,6 +270,7 @@ public class Pasajero extends javax.swing.JFrame {
     private javax.swing.JButton jButtonCompraDeBoleto;
     private javax.swing.JButton jButtonLoginPasajero;
     private javax.swing.JButton jButtonRegresar;
+    private javax.swing.JButton jButtonSalir;
     private javax.swing.JButton jButtonSugerenciaVuelo;
     private javax.swing.JComboBox<String> jComboBoxNoBoletosComprar;
     private javax.swing.JLabel jLabelAsientos;
